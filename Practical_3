@@ -1,0 +1,99 @@
+SE = ["Amar","Raju","Pallavi","Priya","Aman","Vivek","Dinesh", "Rajesh"]
+
+cricket = ["Aman","Amar","Priya","Dinesh"]
+
+badminton = ["Priya","Vivek","Aman",]
+
+football = ["Raju","Pallavi","Aman","Priya"]
+
+
+
+# list of students who play both cricket and badminton
+
+def First():
+
+  A = []
+
+  for i in cricket:
+
+    for j in badminton:
+
+        if i == j:
+
+            A.append(i)    
+
+  print("List of students who play both cricket and badminton are:",A)
+
+
+
+# list of students who play either cricket or badminton but not both
+
+def Second():
+
+  B = []
+
+  for i in cricket:
+
+    if i not in badminton:
+
+      B.append(i)
+
+  for j in badminton:
+
+    if j not in cricket:
+
+      B.append(j)     
+
+
+
+  print("\nList of students who play either cricket or badminton but not both are:",B)
+
+
+
+#  Number of students who play neither cricket nor badminton
+
+def Third():
+
+  C = []
+
+  for i in SE:
+
+    if i not in cricket and badminton:
+
+      C.append(i)
+
+
+
+  print("\nList of students who play neither cricket nor badminton are ",C)
+
+  print("The number of students who play neither cricket nor badminton are ",len(C))
+
+
+
+# Number of students who play cricket and football but not badminton
+
+def Fourth():
+
+  D = []
+
+  for i in SE:
+
+    if i not in badminton:
+
+        D.append(i)
+
+
+
+  print("\nList of students who play cricket and football but not badminton are:",D)
+
+  print("Number of students who play cricket and football both but not badminton are",len(D))
+
+
+
+First()
+
+Second()
+
+Third()
+
+Fourth()
